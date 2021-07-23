@@ -1,0 +1,31 @@
+https://practice.geeksforgeeks.org/problems/linked-list-insertion-1587115620/1/?track=DSASP-LinkedList&batchId=154#
+
+
+
+Node *insertAtBegining(Node *head, int x) {
+       // Your code here
+       Node *temp=new Node(x);
+       temp->next=head;
+       return temp;
+    }
+    
+    
+    //Function to insert a node at the end of the linked list.
+    Node *insertAtEnd(Node *head, int x)  {
+       // Your code here
+       
+       Node *c=new Node(x);
+       if(head==NULL)
+       {
+        return c;   
+       }
+       
+           Node *t=head;
+           while(t->next!=NULL)
+           {
+               t=t->next;
+           }
+           t->next=c;
+           return head;
+       
+    }
